@@ -9,4 +9,12 @@
 <br>
 <br>
 <%= link_to "edit", edit_article_path(@article) %>
+<br>
+<br>
+<%= render partial: 'articles/comments/form' %>
+<br>
+<br>
 
+<h2>Comments (<%= @article.comments.size %>)</h2>
+
+<%= render partial: 'articles/comment', collection: @article.comments %>
