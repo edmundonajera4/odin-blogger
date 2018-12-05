@@ -43,6 +43,10 @@ class ArticlesController < ApplicationController
 		@comment = Comment.new
 		@comment.article_id = @article.id
 	end
+	# 
+	def tag_list (tags_string)
+	  tags.join(", ")
+	end
 
 	# 
   private
